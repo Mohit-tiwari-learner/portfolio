@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.7.0/dist/vanilla-tilt.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="cursor"></div>
+    
+    <!-- 3D Background -->
+    <div id="threejs-background"></div>
+    
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">MY <span>PORTFOLIO</span></div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="glitch" data-text="HI, I'M MOHIT">HI, I'M MOHIT</h1>
+            <h2>Frontend Developer</h2>
+            <p>Creating immersive web experiences with 3D visuals and interactive elements</p>
+            <div class="hero-buttons">
+                <a href="#projects" class="btn btn-primary">View Work</a>
+                <a href="#contact" class="btn btn-secondary">Contact Me</a>
+            </div>
+        </div>
+        <div class="hero-3d">
+            <div class="cube-container" id="floating-cube">
+                <div class="cube">
+                    <div class="face front"><i class="fas fa-code"></i></div>
+                    <div class="face back"><i class="fas fa-cube"></i></div>
+                    <div class="face right"><i class="fab fa-js"></i></div>
+                    <div class="face left"><i class="fab fa-html5"></i></div>
+                    <div class="face top"><i class="fab fa-css3-alt"></i></div>
+                    <div class="face bottom"><i class="fas fa-laptop-code"></i></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="section-header">
+            <h2>About <span>Me</span></h2>
+            <div class="header-line"></div>
+        </div>
+        <div class="about-content">
+            <div class="about-image">
+                <div class="image-wrapper" data-tilt>
+                    <img src="1000049229.jpg" alt="Developer">
+                    <div class="image-border"></div>
+                </div>
+            </div>
+            <div class="about-text">
+                <h3>Innovative Web Developer</h3>
+                <p>No Experience learning stage</p>
+                <div class="about-details">
+                    <div class="detail-item">
+                        <span>Name:</span>
+                        <p>Mohit tiwari</p>
+                    </div>
+                    <div class="detail-item">
+                        <span>Email:</span>
+                        <p>mohit200409tiwari@gmail.com</p>
+                    </div>
+                    <div class="detail-item">
+                        <span>Experience:</span>
+                        <p>Still learning</p>
+                    </div>
+                    <div class="detail-item">
+                        <span>Location:</span>
+                        <p>Bhopal,MP,India</p>
+                    </div>
+                </div>
+                <a href="#" class="btn btn-primary">Download CV</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="section-header">
+            <h2>My <span>Skills</span></h2>
+            <div class="header-line"></div>
+        </div>
+        <div class="skills-container">
+            <div class="skill-category">
+                <h3>Frontend</h3>
+                <div class="skill-bar">
+                    <div class="skill-info">
+                        <span>HTML5</span>
+                        <span>95%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress html"></div>
+                    </div>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-info">
+                        <span>CSS3</span>
+                        <span>90%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress css"></div>
+                    </div>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-info">
+                        <span>JavaScript</span>
+                        <span>85%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress js"></div>
+                    </div>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-info">
+                        <span>React</span>
+                        <span>80%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress react"></div>
+                    </div>
+                </div>
+            </div>
+            
+            
+                </div>
+            </div>
+            
+            <div class="skill-visual">
+                <div class="skill-sphere" id="skill-sphere"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="section-header">
+            <h2>My <span>Projects</span></h2>
+            <div class="header-line"></div>
+        </div>
+        <div class="projects-container">
+            <div class="project-card" data-tilt>
+                <div class="project-image">
+                    <img src="voice-lassedesignen-stock.webp" alt="3D Dashboard">
+                    <div class="project-overlay">
+                        <h3>VOISE ASSISTANT</h3>
+                        <p>Python | SpeechRecognition | pyttsx3 | Porcupine | pywhatkit | sounddevice</p>
+                        <a href="https://github.com/Mohit-tiwari-learner/voise-assistant" class="btn btn-small">View Project</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="project-card" data-tilt>
+                <div class="project-image">
+                    <img src="https://images.unsplash.com/photo-1555774698-0b77e0d5fac6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80" alt="VR Website">
+                    <div class="project-overlay">
+                        <h3>NOTHING</h3>
+                        <p>still working</p>
+                        <a href="#" class="btn btn-small">View Project</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="project-card" data-tilt>
+                <div class="project-image">
+                    <img src="https://images.unsplash.com/photo-1626785774573-4b799315345d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=871&q=80" alt="E-commerce">
+                    <div class="project-overlay">
+                        <h3>NOTHING</h3>
+                        <p>Still working</p>
+                        <a href="#" class="btn btn-small">View Project</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="project-card" data-tilt>
+                <div class="project-image">
+                    <img src="https://images.unsplash.com/photo-1639762681057-408e52192e55?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1032&q=80" alt="Game">
+                    <div class="project-overlay">
+                        <h3>Earn Through Group Mentorship Sessions</h3>
+                        <p>The "Earn Through Group Mentorship Sessions" platform is a blockchain-based solution </p>
+                        <a href="https://github.com/Mohit-tiwari-learner/Earn-through-Group-Mentorship-sessions" class="btn btn-small">View Project</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="section-header">
+            <h2>Contact <span>Me</span></h2>
+            <div class="header-line"></div>
+        </div>
+        <div class="contact-container">
+            <div class="contact-info">
+                <h3>Get In Touch</h3>
+                <p>Have a project in mind or want to discuss potential opportunities? Feel free to reach out!</p>
+                <div class="info-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>Email:</span>
+                    <p>mohit200409tiwari@gmail.com</p>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-phone"></i>
+                    <span>Phone:</span>
+                    <p>91-9424406811</p>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Location:</span>
+                    <p>Bhopal,MP,India</p>
+                </div>
+                <div class="social-links">
+                    <a href="https://github.com/Mohit-tiwari-learner"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/mohit-tiwari-426598338/"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/mohit____tiwari______/?next=%2F"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="contact-form">
+                <form>
+                    <div class="form-group">
+                        <input type="text" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" placeholder="Subject">
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">DEV<span>3D</span></div>
+            <p>© 2025 All Rights Reserved. Designed with ❤️ by Mohit</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
